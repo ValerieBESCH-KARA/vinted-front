@@ -1,0 +1,50 @@
+hero {
+  position: relative;
+}
+
+hero img {
+  height: 530px;
+  width: 100vw;
+  object-fit: cover;
+}
+
+hero .banner {
+  position: relative;
+}
+
+hero .effet {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 110px;
+}
+
+hero .hero-bloc {
+  height: 300px;
+  width: 320px;
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+hero p {
+  font-size: 34px;
+  line-height: 42px;
+}
+
+hero button {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #2baeb7;
+  font-size: 16px;
+  height: 45px;
+  margin-top: 32px;
+  padding: 0 14px;
+  width: 187px;
+}

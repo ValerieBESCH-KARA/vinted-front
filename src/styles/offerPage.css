@@ -1,0 +1,43 @@
+main {
+  background-color: #ebedee;
+}
+main .offer-page {
+  display: flex;
+  gap: 10px;
+  padding-top: 45px;
+  padding-bottom: calc(100vh - 765px);
+}
+
+main .offer-page > div:first-child {
+  width: 70%;
+  height: 600px;
+}
+main .offer-bloc {
+  width: 40%;
+  height: 600px;
+  padding: 30px;
+  background-color: white;
+}
+
+.offer-bloc p {
+  font-size: 24px;
+  color: black;
+}
+
+.offer-info {
+  color: #c1c1c1;
+  padding: 30px 0;
+}
+
+main .offer-bloc span {
+  color: white;
+  background-color: #45adb6;
+  border-radius: 5px;
+  padding: 10px 170px;
+}
+
+main .offer-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

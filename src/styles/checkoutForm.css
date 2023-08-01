@@ -1,0 +1,38 @@
+.payment-page {
+  background-color: #eaedee;
+  display: flex;
+  justify-content: center;
+  padding-top: 36px;
+  height: 87vh;
+}
+
+.payment-bloc {
+  height: 555px;
+  width: 600px;
+  background-color: white;
+  padding: 25px;
+}
+
+h3 {
+  font-size: 14px;
+  line-height: 22px;
+  color: #ababab;
+}
+
+.checkoutForm-bloc {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 60px;
+}
+
+.resume {
+  font-size: 16px;
+  color: #b9b9b9;
+}
+.button-pay {
+  width: 552px;
+  height: 46px;
+  background-color: #3fc06c;
+  color: white;
+}
