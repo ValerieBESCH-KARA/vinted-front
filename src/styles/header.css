@@ -63,6 +63,7 @@ header .button-reverse {
 header .button-deconnexion {
   margin: 10px;
   border-radius: 5px;
+  border: none;
   height: 30px;
   width: 101px;
   font-size: 12px;

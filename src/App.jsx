@@ -11,6 +11,7 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import PublishPage from "./pages/PublishPage";
 import PaymentPage from "./pages/PaymentPage";
+import Footer from "./components/Footer";
 
 function App() {
   const [token, setToken] = useState(Cookies.get("token") || "");
@@ -30,6 +31,8 @@ function App() {
           element={<PaymentPage token={token} setToken={setToken} />}
         />
       </Routes>
+
+      <Footer />
     </Router>
   );
 }

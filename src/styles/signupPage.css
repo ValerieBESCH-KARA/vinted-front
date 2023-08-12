@@ -52,5 +52,6 @@ button {
   background-color: #2aaeb7;
   color: white;
   border-radius: 5px;
+  border: none;
   font-size: 16px;
 }
