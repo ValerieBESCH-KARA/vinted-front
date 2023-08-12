@@ -31,17 +31,17 @@ const HomePage = () => {
   return isLoading ? (
     <div>Laoding...</div>
   ) : (
-    <div>
+    <main>
       <Hero />
 
-      <main className="home-page ">
+      <div className="home-page ">
         <div className="container offers-bloc">
           {offersList.map((offer) => {
             return <OfferCard key={offer._id} offer={offer} />;
           })}
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 };
 
