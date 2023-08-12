@@ -45,7 +45,7 @@ const LoginPage = ({ setToken }) => {
 
   return (
     <main>
-      <div className="container form-bloc">
+      <div className="container form-bloc signup-bloc">
         <h1>Se connecter</h1>
 
         <form onSubmit={handleSubmit}>
