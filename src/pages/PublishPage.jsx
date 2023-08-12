@@ -82,112 +82,128 @@ const PublishPage = ({ token }) => {
           </div>
 
           <div className="publish-bloc">
-            <div>
+            <div className="input-bloc">
               <label htmlFor="title">Titre</label>
-              <input
-                type="text"
-                id="title"
-                onChange={(event) => {
-                  handleChange(event, setTitle);
-                }}
-                value={title}
-                placeholder="ex: Chemise Sézane verte"
-              />
+              <div>
+                <input
+                  type="text"
+                  id="title"
+                  onChange={(event) => {
+                    handleChange(event, setTitle);
+                  }}
+                  value={title}
+                  placeholder="ex: Chemise Sézane verte"
+                />
+              </div>
             </div>
 
-            <div>
+            <div className="input-bloc description">
               <label htmlFor="desc">Décris ton article</label>
-              <textarea
-                type="text"
-                id="desc"
-                onChange={(event) => {
-                  handleChange(event, setDescription);
-                }}
-                value={description}
-                placeholder="ex: porté quelques fois, taille correctement"
-              />
+              <div>
+                <textarea
+                  type="text"
+                  id="desc"
+                  onChange={(event) => {
+                    handleChange(event, setDescription);
+                  }}
+                  value={description}
+                  placeholder="ex: porté quelques fois, taille correctement"
+                />
+              </div>
             </div>
           </div>
 
           <div className="publish-bloc">
-            <div>
+            <div className="input-bloc">
               <label htmlFor="brand">Marque</label>
-              <input
-                type="text"
-                id="brand"
-                onChange={(event) => {
-                  handleChange(event, setBrand);
-                }}
-                value={brand}
-                placeholder="ex: Zara"
-              />
+              <div>
+                <input
+                  type="text"
+                  id="brand"
+                  onChange={(event) => {
+                    handleChange(event, setBrand);
+                  }}
+                  value={brand}
+                  placeholder="ex: Zara"
+                />
+              </div>
             </div>
 
-            <div>
+            <div className="input-bloc">
               <label htmlFor="size">Taille</label>
-              <input
-                type="text"
-                id="size"
-                onChange={(event) => {
-                  handleChange(event, setSize);
-                }}
-                value={size}
-                placeholder="ex: L/ 40/ 12"
-              />
+              <div>
+                <input
+                  type="text"
+                  id="size"
+                  onChange={(event) => {
+                    handleChange(event, setSize);
+                  }}
+                  value={size}
+                  placeholder="ex: L/ 40/ 12"
+                />
+              </div>
             </div>
 
-            <div>
+            <div className="input-bloc">
               <label htmlFor="color">Couleur</label>
-              <input
-                type="text"
-                id="color"
-                onChange={(event) => {
-                  handleChange(event, setColor);
-                }}
-                value={color}
-                placeholder="ex: Fushia"
-              />
+              <div>
+                <input
+                  type="text"
+                  id="color"
+                  onChange={(event) => {
+                    handleChange(event, setColor);
+                  }}
+                  value={color}
+                  placeholder="ex: Fushia"
+                />
+              </div>
             </div>
 
-            <div>
+            <div className="input-bloc">
               <label htmlFor="condition">État</label>
-              <input
-                type="text"
-                id="condition"
-                onChange={(event) => {
-                  handleChange(event, setCondition);
-                }}
-                value={condition}
-                placeholder="Neuf avec étiquette"
-              />
+              <div>
+                <input
+                  type="text"
+                  id="condition"
+                  onChange={(event) => {
+                    handleChange(event, setCondition);
+                  }}
+                  value={condition}
+                  placeholder="Neuf avec étiquette"
+                />
+              </div>
             </div>
 
-            <div>
+            <div className="input-bloc">
               <label htmlFor="city">Lieu</label>
-              <input
-                type="text"
-                id="city"
-                onChange={(event) => {
-                  handleChange(event, setCity);
-                }}
-                value={city}
-                placeholder="ex: Paris"
-              />
+              <div>
+                <input
+                  type="text"
+                  id="city"
+                  onChange={(event) => {
+                    handleChange(event, setCity);
+                  }}
+                  value={city}
+                  placeholder="ex: Paris"
+                />
+              </div>
             </div>
           </div>
 
           <div className="publish-bloc">
-            <div>
+            <div className="input-bloc">
               <label htmlFor="price">Prix</label>
-              <input
-                type="number"
-                id="price"
-                onChange={(event) => {
-                  handleChange(event, setPrice);
-                }}
-                value={price}
-                placeholder="0,00 €"
-              />
+              <div>
+                <input
+                  type="number"
+                  id="price"
+                  onChange={(event) => {
+                    handleChange(event, setPrice);
+                  }}
+                  value={price}
+                  placeholder="0,00 €"
+                />
+              </div>
             </div>
           </div>
 
