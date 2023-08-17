@@ -1,6 +1,7 @@
 import { Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "../styles/publishPage.css";
 
@@ -15,6 +16,7 @@ const PublishPage = ({ token }) => {
   const [color, setColor] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
   const [preview, setPreview] = useState(null);
+  const [exchange, setExchange] = useState(false);
 
   const handleChange = (event, setState) => {
     setState(event.target.value);
@@ -67,17 +69,44 @@ const PublishPage = ({ token }) => {
         >
           <div className="picture-publish-bloc ">
             <div className="picture-publish">
-              <label htmlFor="selectedFile">Ajoute une photo</label>
-              <input
-                type="file"
-                id="selectedFile"
-                onChange={(event) => {
-                  setSelectedFile(event.target.files[0]);
-                  const objectUrl = URL.createObjectURL(event.target.files[0]);
-                  setPreview(objectUrl);
-                }}
-              />
-              {preview && <img src={preview} alt="previsualisation" />}
+              {preview ? (
+                <div className="publish-preview-bloc">
+                  <img
+                    src={preview}
+                    alt="previsualisation"
+                    className="publish-preview"
+                  />
+                  <div
+                    className="remove-img"
+                    onClick={() => {
+                      setPreview("");
+                    }}
+                  >
+                    X
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <input
+                    type="file"
+                    id="selectedFile"
+                    onChange={(event) => {
+                      setSelectedFile(event.target.files[0]);
+                      const objectUrl = URL.createObjectURL(
+                        event.target.files[0]
+                      );
+                      setPreview(objectUrl);
+                    }}
+                  />
+                  <label htmlFor="selectedFile">
+                    <FontAwesomeIcon
+                      className="publish-icon"
+                      icon="fa-solid fa-plus"
+                    />
+                    <span>Ajoute une photo</span>
+                  </label>
+                </div>
+              )}
             </div>
           </div>
 
@@ -92,7 +121,7 @@ const PublishPage = ({ token }) => {
                     handleChange(event, setTitle);
                   }}
                   value={title}
-                  placeholder="ex: Chemise Sézane verte"
+                  placeholder="ex : Chemise Sézane verte"
                 />
               </div>
             </div>
@@ -107,7 +136,7 @@ const PublishPage = ({ token }) => {
                     handleChange(event, setDescription);
                   }}
                   value={description}
-                  placeholder="ex: porté quelques fois, taille correctement"
+                  placeholder="ex : porté quelques fois, taille correctement"
                 />
               </div>
             </div>
@@ -124,7 +153,7 @@ const PublishPage = ({ token }) => {
                     handleChange(event, setBrand);
                   }}
                   value={brand}
-                  placeholder="ex: Zara"
+                  placeholder="ex : Zara"
                 />
               </div>
             </div>
@@ -139,7 +168,7 @@ const PublishPage = ({ token }) => {
                     handleChange(event, setSize);
                   }}
                   value={size}
-                  placeholder="ex: L/ 40/ 12"
+                  placeholder="ex : L/ 40/ 12"
                 />
               </div>
             </div>
@@ -154,7 +183,7 @@ const PublishPage = ({ token }) => {
                     handleChange(event, setColor);
                   }}
                   value={color}
-                  placeholder="ex: Fushia"
+                  placeholder="ex : Fushia"
                 />
               </div>
             </div>
@@ -184,7 +213,7 @@ const PublishPage = ({ token }) => {
                     handleChange(event, setCity);
                   }}
                   value={city}
-                  placeholder="ex: Paris"
+                  placeholder="ex : Paris"
                 />
               </div>
             </div>
@@ -193,21 +222,38 @@ const PublishPage = ({ token }) => {
           <div className="publish-bloc">
             <div className="input-bloc">
               <label htmlFor="price">Prix</label>
-              <div>
-                <input
-                  type="number"
-                  id="price"
-                  onChange={(event) => {
-                    handleChange(event, setPrice);
-                  }}
-                  value={price}
-                  placeholder="0,00 €"
-                />
+              <div className="price-bloc">
+                <div>
+                  <input
+                    type="text"
+                    id="price"
+                    onChange={(event) => {
+                      handleChange(event, setPrice);
+                    }}
+                    value={price}
+                    placeholder="0.00 €"
+                  />
+
+                  {/* <label htmlFor="exchange">
+                    Je suis intéressé(e) par les échanges
+                  </label>
+                  <input
+                    type="checkbox"
+                    name="exchange"
+                    id="exchange"
+                    checked={exchange}
+                    onChange={(event) => {
+                      setNewsletter(!setExchange);
+                    }}
+                  /> */}
+                </div>
               </div>
             </div>
           </div>
 
-          <button>Ajouter</button>
+          <div className="form-button">
+            <button>Ajouter</button>
+          </div>
         </form>
       </div>
     </div>

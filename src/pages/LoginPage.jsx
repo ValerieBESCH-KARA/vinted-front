@@ -44,7 +44,7 @@ const LoginPage = ({ setToken }) => {
   };
 
   return (
-    <main>
+    <main className="main">
       <div className="container form-bloc signup-bloc">
         <h1>Se connecter</h1>
 

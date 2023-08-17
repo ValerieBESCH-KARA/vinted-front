@@ -44,7 +44,7 @@ const SignupPage = ({ setToken }) => {
   };
 
   return (
-    <main>
+    <main className="main">
       <div className="container signup-bloc">
         <h1>S'inscrire</h1>
 

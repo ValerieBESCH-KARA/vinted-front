@@ -3,6 +3,9 @@ import "./styles/App.css";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cookies from "js-cookie";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+library.add(faPlus);
 
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
